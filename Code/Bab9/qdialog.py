@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QPushButton, QVBoxLayout
+from PyQt6.QtWidgets import QApplication, QMainWindow, QDialog, QPushButton, QVBoxLayout
 
 class CustomDialog(QDialog):
     def __init__(self):
@@ -25,4 +25,4 @@ if __name__ == "__main__":
     app = QApplication([])
     window = MainWindow()
     window.show()
-    app.exec_()
+    app.exec()

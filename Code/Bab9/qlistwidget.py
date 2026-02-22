@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QListWidget
+from PyQt6.QtWidgets import QApplication, QMainWindow, QListWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -18,4 +18,4 @@ if __name__ == "__main__":
     app = QApplication([])
     window = MainWindow()
     window.show()
-    app.exec_()
+    app.exec()
