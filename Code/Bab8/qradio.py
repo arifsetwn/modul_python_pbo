@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QRadioButton
+from PyQt6.QtWidgets import QApplication, QMainWindow, QRadioButton
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -14,4 +14,4 @@ class MainWindow(QMainWindow):
 app = QApplication([])
 window = MainWindow()
 window.show()
-app.exec_()
+app.exec()

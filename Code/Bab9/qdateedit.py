@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QDateTimeEdit
-from PyQt5.QtCore import QDateTime
+from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QDateTimeEdit
+from PyQt6.QtCore import QDateTime
 
 
 class DateTimeEditExample(QWidget):

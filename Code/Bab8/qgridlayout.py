@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QPushButton
+from PyQt6.QtWidgets import QApplication, QWidget, QGridLayout, QPushButton
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -17,4 +17,4 @@ class MainWindow(QWidget):
 app = QApplication([])
 window = MainWindow()
 window.show()
-app.exec_()
+app.exec()

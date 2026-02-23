@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QSlider
-from PyQt5.QtCore import Qt
+from PyQt6.QtWidgets import QApplication, QMainWindow, QSlider
+from PyQt6.QtCore import Qt
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -16,4 +16,4 @@ class MainWindow(QMainWindow):
 app = QApplication([])
 window = MainWindow()
 window.show()
-app.exec_()
+app.exec()

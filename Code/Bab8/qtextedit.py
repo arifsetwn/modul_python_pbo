@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit
+from PyQt6.QtWidgets import QApplication, QMainWindow, QTextEdit
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -13,4 +13,4 @@ class MainWindow(QMainWindow):
 app = QApplication([])
 window = MainWindow()
 window.show()
-app.exec_()
+app.exec()

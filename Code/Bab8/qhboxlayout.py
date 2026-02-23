@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QPushButton
+from PyQt6.QtWidgets import QApplication, QWidget, QHBoxLayout, QPushButton
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -15,4 +15,4 @@ class MainWindow(QWidget):
 app = QApplication([])
 window = MainWindow()
 window.show()
-app.exec_()
+app.exec()

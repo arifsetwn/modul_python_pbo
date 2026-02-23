@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
 
     def open_dialog(self):
         dialog = CustomDialog()
-        dialog.exec_()
+        dialog.exec()
 
 if __name__ == "__main__":
     app = QApplication([])

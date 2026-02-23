@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QInputDialog, QListWidget, QMessageBox
-from PyQt5.QtSql import QSqlDatabase, QSqlQuery
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QInputDialog, QListWidget, QMessageBox
+from PyQt6.QtSql import QSqlDatabase, QSqlQuery
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
 
         # Membuat tabel kontak jika belum ada
         query = QSqlQuery()
-        query.exec_("CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)")
+        query.exec("CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)")
 
         # Membuat widget daftar kontak
         self.listWidget = QListWidget()
@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
             query = QSqlQuery()
             query.prepare("INSERT INTO contacts (name) VALUES (:name)")
             query.bindValue(":name", name)
-            if query.exec_():
+            if query.exec():
                 self.loadContacts()
 
     def deleteContact(self):
@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
             query = QSqlQuery()
             query.prepare("DELETE FROM contacts WHERE id = :id")
             query.bindValue(":id", id)
-            if query.exec_():
+            if query.exec():
                 self.loadContacts()
         else:
             QMessageBox.warning(self, "Delete Contact", "Please select a contact to delete")
@@ -73,4 +73,4 @@ if __name__ == "__main__":
     app = QApplication([])
     main_window = MainWindow()
     main_window.show()
-    app.exec_()
+    app.exec()

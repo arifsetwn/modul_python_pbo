@@ -1,9 +1,8 @@
-from PyQt5.QtWidgets import QApplication, QLabel
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
 
 app = QApplication([]) #ini object dari QApplication
-
-label = QLabel('Hello PyQt!') #Widget Text
-
-label.show() #menampilkan
-
-app.exec_()
+window = QMainWindow()
+button = QPushButton('Click Me!')
+window.setCentralWidget(button)
+window.show()
+app.exec()

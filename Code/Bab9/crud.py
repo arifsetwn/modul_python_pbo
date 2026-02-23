@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtSql import QSqlDatabase, QSqlQuery
+from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtSql import QSqlDatabase, QSqlQuery
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -16,25 +16,25 @@ class MainWindow(QMainWindow):
 
         # Membuat tabel dalam database (Create)
         query = QSqlQuery()
-        query.exec_("CREATE TABLE people (id INTEGER PRIMARY KEY, name TEXT)")
+        query.exec("CREATE TABLE people (id INTEGER PRIMARY KEY, name TEXT)")
 
         # Menambahkan data ke tabel (Create)
-        query.exec_("INSERT INTO people (name) VALUES ('Setiawan Arif')")
+        query.exec("INSERT INTO people (name) VALUES ('Setiawan Arif')")
 
         # Mengambil data dari tabel (Read)
-        query.exec_("SELECT * FROM people")
+        query.exec("SELECT * FROM people")
         while query.next():
             for i in range(2): #range(2) karena terdapat 2 kolom dalam database
                 print(query.value(i))
 
         # Memperbarui data dalam tabel (Update)
-        query.exec_("UPDATE people SET name = 'Jane Doe' WHERE id = 1")
+        query.exec("UPDATE people SET name = 'Jane Doe' WHERE id = 1")
 
         # Menghapus data dari tabel (Delete)
-        query.exec_("DELETE FROM people WHERE id = 1")
+        query.exec("DELETE FROM people WHERE id = 1")
 
 if __name__ == "__main__":
     app = QApplication([])
     main_window = MainWindow()
     main_window.show()
-    app.exec_()
+    app.exec()

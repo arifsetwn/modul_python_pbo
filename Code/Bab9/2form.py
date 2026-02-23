@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QDialog
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QDialog
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -21,4 +21,4 @@ if __name__ == "__main__":
     app = QApplication([])
     main_window = MainWindow()
     main_window.show()
-    app.exec_()
+    app.exec()
